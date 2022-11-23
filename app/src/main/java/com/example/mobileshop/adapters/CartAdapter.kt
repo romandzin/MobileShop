@@ -8,11 +8,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mobileshop.CartActivity
+import com.example.mobileshop.ui.activity.CartActivity
 import com.example.mobileshop.MyViewModel
 import com.example.mobileshop.R
-import com.example.mobileshop.datamodule.CartPhone
-import com.example.mobileshop.datamodule.Phone
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
@@ -32,7 +30,7 @@ class CartViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     val delete_button = itemView.findViewById<ImageView>(R.id.delete_button)
 }
 
-class CartAdapter(private val categoriesList: ArrayList<CartPhone>, var viewModel: MyViewModel, val activity: CartActivity):
+class CartAdapter(private val categoriesList: ArrayList<com.example.data.CartPhone>, var viewModel: MyViewModel, val activity: CartActivity):
     RecyclerView.Adapter<CartViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {

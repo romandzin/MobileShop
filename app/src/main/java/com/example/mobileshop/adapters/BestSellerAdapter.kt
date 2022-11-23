@@ -11,7 +11,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mobileshop.DetailsActivity
+import com.example.mobileshop.ui.activity.DetailsActivity
 import com.example.mobileshop.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
@@ -31,7 +31,7 @@ class BestSellerViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     var clicked: Boolean = false
 }
 
-class BestSellerAdapter(private val categoriesList: ArrayList<com.example.mobileshop.datamodule.Phone>, private val context: Context):
+class BestSellerAdapter(private val categoriesList: ArrayList<com.example.data.Phone>, private val context: Context):
     RecyclerView.Adapter<BestSellerViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BestSellerViewHolder {

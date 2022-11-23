@@ -1,8 +1,6 @@
 package com.example.mobileshop
 
 import android.content.res.Resources
-import android.graphics.Bitmap
-import android.graphics.ColorFilter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,14 +9,13 @@ import android.widget.TextView
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
-import org.w3c.dom.Text
 
 class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     val nameText = itemView.findViewById<TextView>(R.id.category_name)
     var image = itemView.findViewById<ImageView>(R.id.ic_category)
 }
 
-class CategoryAdapter(private val categoriesList: ArrayList<Category>, val resources: Resources):
+class CategoryAdapter(private val categoriesList: ArrayList<com.example.data.Category>, val resources: Resources):
     Adapter<MyViewHolder>() {
 
     val saveInstanceList = ArrayList<View>()

@@ -1,7 +1,7 @@
 package com.example.mobileshop
 
 import androidx.lifecycle.ViewModel
-import com.example.mobileshop.datamodule.CartPhone
+import com.example.data.CartPhone
 
 class MyViewModel: ViewModel() {
 

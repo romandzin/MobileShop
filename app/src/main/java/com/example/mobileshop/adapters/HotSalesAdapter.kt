@@ -1,6 +1,5 @@
 package com.example.mobileshop
 
-import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.view.LayoutInflater
@@ -9,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mobileshop.datamodule.Phone
+import com.example.data.Phone
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
@@ -25,7 +24,7 @@ class HotSalesViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     var image = itemView.findViewById<ImageView>(R.id.image)
 }
 
-class HotSalesAdapter(private val categoriesList: ArrayList<Phone>):
+class HotSalesAdapter(private val categoriesList: ArrayList<com.example.data.Phone>):
     RecyclerView.Adapter<HotSalesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HotSalesViewHolder {
